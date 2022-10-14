@@ -1,0 +1,17 @@
+{
+  "name": "codeberg-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-tea": "https://github.com/rilysh/eslint-config-tea.git",
+    "eslint-plugin-import": "^2.26.0",
+    "undici": "^5.11.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0"
+  }
+}
