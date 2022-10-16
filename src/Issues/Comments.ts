@@ -5,7 +5,7 @@ import {
     listCommentsOnIssueIndexURL,
     listCommentsOnIssueURL,
 } from "../Constants";
-import type { createCommentResp } from "../types/types";
+import type { createdCommentResp } from "../types/types";
 
 export default class Comments {
     public api: string;
@@ -50,7 +50,7 @@ export default class Comments {
         reponame: string,
         index: number,
         message: string,
-    ): Promise<createCommentResp | string | undefined> {
+    ): Promise<createdCommentResp | string | undefined> {
         const data = await request(`${this.api}${createCommentURL(username, reponame, index)}`, {
             method: "POST",
             headers: {
@@ -66,7 +66,7 @@ export default class Comments {
             const text = await data.body.text();
             return text;
         }
-        const json = await data.body.json() as createCommentResp;
+        const json = await data.body.json() as createdCommentResp;
         return json;
     }
 
