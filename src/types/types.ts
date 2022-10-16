@@ -51,7 +51,7 @@ export interface getTreeResp {
     tree: [];
 }
 
-export interface createCommentResp {
+export interface createdCommentResp {
     id: number;
     user: {
         id: number;
@@ -63,4 +63,10 @@ export interface createCommentResp {
     body: string;
     created_at: string;
     updated_at: string;
+}
+
+export interface listSingleLabelResp {
+    id: number;
+    name: string;
+    color: string;
 }
