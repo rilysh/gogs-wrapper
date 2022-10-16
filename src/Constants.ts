@@ -14,6 +14,13 @@ const listCommentsOnIssueIndexURL = (username: string, reponame: string, index: 
 const listCommentsOnIssueURL = (username: string, reponame: string) => `/repos/${username}/${reponame}/issues/comments`;
 const createCommentURL = (username: string, reponame: string, index: number) => `/repos/${username}/${reponame}/issues/${index}/comments`;
 const editCommentURL = (username: string, reponame: string, index: number, id: string) => `/repos/${username}/${reponame}/issues/${index}/comments/${id}`;
+const listAllLabelsURL = (username: string, reponame: string) => `/repos/${username}/${reponame}/labels`;
+const listSingleLabelURL = (username: string, reponame: string, id: number) => `/repos/${username}/${reponame}/labels/${id}`;
+const editLabelURL = (username: string, reponame: string, id: number) => `/repos/${username}/${reponame}/labels/${id}`;
+const listLabelsOnIssueURL = (username: string, reponame: string, index: number) => `/repos/${username}/${reponame}/issues/${index}/labels`;
+const addLabelsToIssueURL = (username: string, reponame: string, index: number) => `/repos/${username}/${reponame}/issues/${index}/labels`;
+const removeLabelFromIssueURL = (username: string, reponame: string, index: number, id: number) => `/repos/${username}/${reponame}/issues/${index}/labels/${id}`;
+const removeAllLabelsFromIssueURL = (username: string, reponame: string, index: number) => `/repos/${username}/${reponame}/issues/${index}/labels`;
 
 export {
     createOrgURL,
@@ -32,4 +39,11 @@ export {
     listCommentsOnIssueURL,
     createCommentURL,
     editCommentURL,
+    listAllLabelsURL,
+    listSingleLabelURL,
+    editLabelURL,
+    listLabelsOnIssueURL,
+    addLabelsToIssueURL,
+    removeLabelFromIssueURL,
+    removeAllLabelsFromIssueURL,
 };
