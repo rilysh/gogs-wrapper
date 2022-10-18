@@ -65,8 +65,30 @@ export interface createdCommentResp {
     updated_at: string;
 }
 
-export interface listSingleLabelResp {
+export interface listedSingleLabelResp {
     id: number;
     name: string;
     color: string;
+}
+
+export interface getASingleMilestoneResp {
+    id: number;
+    state: string;
+    title: string;
+    description: string;
+    open_issues: number;
+    closed_issues: number;
+    closed_at: string | null;
+    due_on: string;
+}
+
+export interface createdAMilestoneResp {
+    id:4,
+    state: string;
+    title: string;
+    description: string;
+    open_issues: number;
+    closed_issues: number;
+    closed_at: string | null;
+    due_on: string;
 }
